@@ -2,8 +2,10 @@ package delaystore
 
 import (
 	"fmt"
+	"io"
 	"time"
 
+	ds "github.com/ipfs/go-datastore"
 	delayed "github.com/ipfs/go-datastore/delayed"
 	delay "github.com/ipfs/go-ipfs-delay"
 	plugin "github.com/ipfs/go-ipfs/plugin"
@@ -93,5 +95,13 @@ func (c *datastoreConfig) Create(path string) (repo.Datastore, error) {
 	if err != nil {
 		return nil, err
 	}
-	return delayed.New(inner, delay.Fixed(c.delay)), nil
+	// FIXME: We can return the delayed datastore directly once
+	// https://github.com/ipfs/go-datastore/pull/108 is merged.
+	return struct {
+		ds.Batching
+		io.Closer
+	}{
+		delayed.New(inner, delay.Fixed(c.delay)).(ds.Batching),
+		inner,
+	}, nil
 }
