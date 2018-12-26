@@ -1,0 +1,35 @@
+{
+  "author": "stebalien",
+  "bugs": {
+    "url": "https://github.com/ipfs/go-ipfs-example-plugin/issues"
+  },
+  "gx": {
+    "dvcsimport": "github.com/ipfs/go-ipfs-example-plugin"
+  },
+  "gxDependencies": [
+    {
+      "hash": "QmUJYo4etAQqFfSS2rarFAE97eNGB8ej64YkRT2SmsYD4r",
+      "name": "go-ipfs",
+      "version": "0.4.18"
+    },
+    {
+      "author": "jbenet",
+      "hash": "QmaRb5yNXKonhbkpNxNawoydk4N6es6b4fPj19sjEKsh5D",
+      "name": "go-datastore",
+      "version": "3.4.0"
+    },
+    {
+      "author": "hsanjuan",
+      "hash": "QmRJVNatYJwTAHgdSM1Xef9QVQ1Ch3XHdmcrykjP5Y4soL",
+      "name": "go-ipfs-delay",
+      "version": "0.0.1"
+    }
+  ],
+  "gxVersion": "0.14.0",
+  "language": "go",
+  "license": "MIT",
+  "name": "go-ipfs-example-plugin",
+  "releaseCmd": "git commit -a -m \"gx publish $VERSION\"",
+  "version": "0.0.0"
+}
+
