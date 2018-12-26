@@ -14,9 +14,17 @@ Packages:
 
 * delaystore: an example datastore plugin that wraps an inner datastore in a "delayed" datastore.
 
-## Documentation
+**NOTE:** Plugins only work on Linux and MacOS at the moment. You can track the progress of this issue here: https://github.com/golang/go/issues/19282
 
-https://godoc.org/github.com/ipfs/go-ipfs-example-plugin
+## Building and Installing
+
+Go-IPFS uses [gx](https://github.com/whyrusleeping/gx) as it's package manager. While most packages related to go-ipfs can be used without `gx`, packages that directly *depend* on go-ipfs (including this one) cannot.
+
+If you don't have `gx`, install it with `make gx` (make sure that `$GOPATH/bin` is in your `$PATH`).
+
+You can *build* the example plugin by running `make build`. You can then install it into your local IPFS repo by running `make install`.
+
+**NOTE:** This plugin exists as an *example* and a starting point for new plugins. It isn't particularly useful by itself.
 
 ## Contribute
 
