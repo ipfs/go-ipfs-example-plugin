@@ -1,4 +1,4 @@
-package example
+package main
 
 import (
 	delaystore "github.com/ipfs/go-ipfs-example-plugin/delaystore"
