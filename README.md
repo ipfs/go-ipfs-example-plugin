@@ -13,6 +13,7 @@ This repository contains a set of example go-ipfs plugins, demonstrating how to 
 Packages:
 
 * delaystore: an example datastore plugin that wraps an inner datastore in a "delayed" datastore.
+* greeter: an example daemon plugin that prints "Hello!" on start and "Goodbye!" on exit.
 
 **NOTE 1:** Plugins only work on Linux and MacOS at the moment. You can track the progress of this issue here: https://github.com/golang/go/issues/19282
 
