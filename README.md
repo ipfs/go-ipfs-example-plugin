@@ -22,6 +22,21 @@ You can *build* the example plugin by running `make build`. You can then install
 
 **NOTE:** This plugin exists as an *example* and a starting point for new plugins. It isn't particularly useful by itself.
 
+## Updating go-ipfs
+
+You can build a plugin for a different version of go-ipfs by first running:
+
+```
+> ./update-ipfs.sh ipfs-version
+```
+
+For example, to build against a branch, run:
+
+```
+> ./update-ipfs.sh my/ipfs/branch
+> make build
+```
+
 ## Contribute
 
 Feel free to join in. All welcome. Open an [issue](https://github.com/ipfs/go-ipfs-example-plugin/issues)!
