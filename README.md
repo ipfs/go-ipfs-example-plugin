@@ -27,13 +27,13 @@ You can *build* the example plugin by running `make build`. You can then install
 You can build a plugin for a different version of go-ipfs by first running:
 
 ```
-> ./update-ipfs.sh ipfs-version
+> ./set-target.sh vN.N.N
 ```
 
 For example, to build against a branch, run:
 
 ```
-> ./update-ipfs.sh my/ipfs/branch
+> ./set-target.sh my/ipfs/branch
 > make build
 ```
 
