@@ -30,4 +30,4 @@ build: example-plugin.so
 
 install: build
 	mkdir -p "$(IPFS_PATH)/plugins/"
-	cp example-plugin.so "$(IPFS_PATH)/plugins/example-plugin.so"
+	cp -f example-plugin.so "$(IPFS_PATH)/plugins/example-plugin.so"
