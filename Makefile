@@ -29,4 +29,5 @@ build: example-plugin.so
 	@echo "Built against" $(IPFS_VERSION)
 
 install: build
-	install -Dm700 example-plugin.so "$(IPFS_PATH)/plugins/example-plugin.so"
+	mkdir -p "$(IPFS_PATH)/plugins/"
+	cp example-plugin.so "$(IPFS_PATH)/plugins/example-plugin.so"
