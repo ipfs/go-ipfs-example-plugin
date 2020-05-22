@@ -31,7 +31,7 @@ func (*DelaystorePlugin) Version() string {
 
 // Init initializes plugin, satisfying the plugin.Plugin interface. Put any
 // initialization logic here.
-func (*DelaystorePlugin) Init() error {
+func (*DelaystorePlugin) Init(env *plugin.Environment) error {
 	return nil
 }
 

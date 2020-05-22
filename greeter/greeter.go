@@ -23,7 +23,7 @@ func (*GreeterPlugin) Version() string {
 
 // Init initializes plugin, satisfying the plugin.Plugin interface. Put any
 // initialization logic here.
-func (*GreeterPlugin) Init() error {
+func (*GreeterPlugin) Init(env *plugin.Environment) error {
 	return nil
 }
 
