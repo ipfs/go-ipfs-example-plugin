@@ -29,6 +29,7 @@ You can set `IPFS_VERSION` to:
 
 * `vX.Y.Z` to build against that version of IPFS.
 * `$commit` or `$branch` to build against a specific go-ipfs commit or branch.
+   * Note: if building against a commit or branch make sure to build that commit/branch using the -trimpath flag. For example getting the binary via `go get -trimpath github.com/ipfs/go-ipfs/cmd/ipfs@COMMIT`
 * `/absolute/path/to/source` to build against a specific go-ipfs checkout.
 
 To update the go-ipfs, run:
