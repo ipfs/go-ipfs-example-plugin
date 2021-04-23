@@ -1,6 +1,6 @@
 module github.com/ipfs/go-ipfs-example-plugin
 
-go 1.14
+go 1.15
 
 require (
 	github.com/ipfs/go-datastore v0.4.5
