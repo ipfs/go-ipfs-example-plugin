@@ -27,7 +27,7 @@ go.mod: FORCE
 
 FORCE:
 
-example-plugin.so: plugin.go go.mod
+example-plugin.so: main/main.go go.mod
 	$(GOCC) build $(GOFLAGS) -buildmode=plugin -o "$@" "$<"
 	chmod +x "$@"
 
