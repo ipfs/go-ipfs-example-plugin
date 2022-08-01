@@ -6,9 +6,9 @@ import (
 
 	delayed "github.com/ipfs/go-datastore/delayed"
 	delay "github.com/ipfs/go-ipfs-delay"
-	plugin "github.com/ipfs/go-ipfs/plugin"
-	repo "github.com/ipfs/go-ipfs/repo"
-	fsrepo "github.com/ipfs/go-ipfs/repo/fsrepo"
+	plugin "github.com/ipfs/kubo/plugin"
+	repo "github.com/ipfs/kubo/repo"
+	fsrepo "github.com/ipfs/kubo/repo/fsrepo"
 )
 
 type DelaystorePlugin struct{}
