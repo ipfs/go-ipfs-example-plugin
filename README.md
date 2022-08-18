@@ -6,9 +6,9 @@
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 [![GoDoc](https://godoc.org/github.com/ipfs/go-ipfs-example-plugin?status.svg)](https://godoc.org/github.com/ipfs/go-ipfs-example-plugin)
 
-> example plugin for go-ipfs
+> example plugin for Kubo
 
-This repository contains a set of example go-ipfs plugins, demonstrating how to integrate external plugins into go-ipfs.
+This repository contains a set of example Kubo plugins, demonstrating how to integrate external plugins into Kubo.
 
 Packages:
 
@@ -23,16 +23,16 @@ Packages:
 
 You can *build* the example plugin by running `make build`. You can then install it into your local IPFS repo by running `make install`.
 
-Plugins need to be built against the correct version of go-ipfs. This package generally tracks the latest go-ipfs release but if you need to build against a different version, please set the `IPFS_VERSION` environment variable.
+Plugins need to be built against the correct version of Kubo. This package generally tracks the latest Kubo release but if you need to build against a different version, please set the `IPFS_VERSION` environment variable.
 
 You can set `IPFS_VERSION` to:
 
 * `vX.Y.Z` to build against that version of IPFS.
-* `$commit` or `$branch` to build against a specific go-ipfs commit or branch.
-   * Note: if building against a commit or branch make sure to build that commit/branch using the -trimpath flag. For example getting the binary via `go get -trimpath github.com/ipfs/go-ipfs/cmd/ipfs@COMMIT`
-* `/absolute/path/to/source` to build against a specific go-ipfs checkout.
+* `$commit` or `$branch` to build against a specific Kubo commit or branch.
+   * Note: if building against a commit or branch make sure to build that commit/branch using the -trimpath flag. For example getting the binary via `go get -trimpath github.com/ipfs/kubo/cmd/ipfs@COMMIT`
+* `/absolute/path/to/source` to build against a specific Kubo checkout.
 
-To update the go-ipfs, run:
+To update the Kubo, run:
 
 ```bash
 > make go.mod IPFS_VERSION=version

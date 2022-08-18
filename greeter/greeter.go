@@ -3,8 +3,8 @@ package greeter
 import (
 	"fmt"
 
-	plugin "github.com/ipfs/go-ipfs/plugin"
 	coreiface "github.com/ipfs/interface-go-ipfs-core"
+	plugin "github.com/ipfs/kubo/plugin"
 )
 
 type GreeterPlugin struct{}
