@@ -16,7 +16,7 @@ GOFLAGS += -trimpath
 FORCE:
 
 example-plugin.so: main/main.go go.mod
-	$(GOCC) build $(GOFLAGS) -buildmode=plugin -o "$@" "$<"
+	CGO_ENABLED=1 $(GOCC) build $(GOFLAGS) -buildmode=plugin -o "$@" "$<"
 	chmod +x "$@"
 
 build: example-plugin.so
