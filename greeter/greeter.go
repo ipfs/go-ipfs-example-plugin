@@ -3,7 +3,7 @@ package greeter
 import (
 	"fmt"
 
-	coreiface "github.com/ipfs/interface-go-ipfs-core"
+	coreiface "github.com/ipfs/boxo/coreiface"
 	plugin "github.com/ipfs/kubo/plugin"
 )
 
