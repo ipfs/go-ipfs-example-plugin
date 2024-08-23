@@ -1,6 +1,6 @@
 module github.com/ipfs/go-ipfs-example-plugin
 
-go 1.21
+go 1.22
 
 require (
 	github.com/ipfs/boxo v0.10.2-0.20230629143123-2d3edc552442
