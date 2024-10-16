@@ -3,7 +3,7 @@ package greeter
 import (
 	"fmt"
 
-	coreiface "github.com/ipfs/boxo/coreiface"
+	coreiface "github.com/ipfs/kubo/core/coreiface"
 	plugin "github.com/ipfs/kubo/plugin"
 )
 
@@ -18,7 +18,7 @@ func (*GreeterPlugin) Name() string {
 
 // Version returns the plugin's version, satisfying the plugin.Plugin interface.
 func (*GreeterPlugin) Version() string {
-	return "0.1.0"
+	return "0.2.0"
 }
 
 // Init initializes plugin, satisfying the plugin.Plugin interface. Put any
