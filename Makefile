@@ -21,3 +21,10 @@ build: example-plugin.so
 install: build
 	mkdir -p "$(IPFS_PATH)/plugins/"
 	cp -f example-plugin.so "$(IPFS_PATH)/plugins/example-plugin.so"
+
+clean:
+	rm -f example-plugin.so
+
+uninstall:
+	rm -f "$(IPFS_PATH)/plugins/example-plugin.so"
+	rmdir "$(IPFS_PATH)/plugins/" 2>/dev/null
