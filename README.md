@@ -23,13 +23,12 @@ Packages:
 
 Go plugin system is very whiny. The following constellation need to align:
 
-* You need to be using the same Go version to compile Kubo and the plugin. Upstream releases of Kubo use [whatever it says here](https://github.com/ipfs/distributions/blob/master/.tool-versions#L2) (v0.19.10) at the time of writing.
+* You need to be using the same Go version to compile Kubo and the plugin. Upstream releases of Kubo use [whatever it says here](https://github.com/ipfs/distributions/blob/master/.tool-versions#L2). If using an existing version of Kubo, check what version of golang is was built with using the command `ipfs version --all`.
 * The dependencies in go.mod need to be exactly the same as in the Kubo version that we want the plugin to work with. In this example, the following need to be the same as in [Kubo's go.mod](https://github.com/ipfs/kubo/blob/master/go.mod):
-  * github.com/ipfs/boxo
   * github.com/ipfs/go-datastore
   * github.com/ipfs/go-ipfs-delay
   * github.com/ipfs/kubo
-* There are additional consideration with -trimpath etc (see below).
+* There are additional considerations with -trimpath etc (see below).
 * Failure to do so will cause errors when loading the plugin.
 
 
@@ -47,7 +46,7 @@ to build and install this version.
 If you want to upgrade or use a different official release of Kubo:
 
   1. `go get github.com/ipfs/kubo@<version>`
-  2. Verify `boxo`, `datastore` and other dependencies are aligned with the version of Kubo. Otherwise set the right versions manually.
+  2. Verify `datastore` and other dependencies are aligned with the version of Kubo. Otherwise set the right versions manually.
   3. `go mod tidy`.
 
 In some cases, fully removing the second, "indirect requires" block in `go.mod` and running `go mod tidy` will fix wrong indirect requires.
